@@ -7,5 +7,7 @@ variable "region" {
 variable "clusterName" {
   description = "Name of the EKS cluster"
   type        = string
-  default     = "abc-fire-eks"
+  default     = "abc-fire"
 }
+
+## --- IGNORE ---

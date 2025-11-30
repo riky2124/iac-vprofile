@@ -59,8 +59,8 @@ jobs:
 
       - name: "Terraform Apply on Main"
         id: apply
-        if: github.ref == 'refs/heads/main' && github.event == 'push'
-        run: terraform apply -auto-approve -input=false -parallellism=1 planfile
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        run: terraform apply -auto-approve -input=false -parallelism=1 planfile
 
       - name: "Config AWS creds"
         uses: aws-actions/configure-aws-credentials@v5.1.1
